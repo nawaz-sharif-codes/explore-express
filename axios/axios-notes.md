@@ -51,9 +51,12 @@ await axios.get("/users", {
 
 ---
 
-## Axios POST syntax
+## Axios POST,PUT,PATCH,DELETE syntax
 
 > axios.post(url, data, config)
+> axios.patch(url, data, config)
+> axios.patch(url, data, config)
+> axios.delete(url, config)
 
 ## Error Handling
 
@@ -190,3 +193,16 @@ await api.get('/users');
 - The instance automatically prefixes:
 
 > https://jsonplaceholder.typicode.com
+
+## Folder structure 
+
+```
+src/
+├── api/
+│   ├── customerApi.js
+│   ├── paymentApi.js
+│   └── authApi.js
+├── services/
+├── controllers/
+└── routes/
+```
