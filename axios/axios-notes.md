@@ -156,3 +156,37 @@ await axios.get('/users', {
     }
 }
 ```
+
+---
+
+## Axios Instances
+
+```js
+import axios from 'axios';
+
+const api = axios.create({
+    baseURL: 'https://jsonplaceholder.typicode.com'
+});
+```
+
+Now:
+
+Instead of:
+
+```js
+await axios.get(
+    'https://jsonplaceholder.typicode.com/users'
+);
+```
+
+> You simply write:
+
+```js
+await api.get('/users');
+```
+
+*Notice:*
+
+- The instance automatically prefixes:
+
+> https://jsonplaceholder.typicode.com

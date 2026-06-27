@@ -1,8 +1,8 @@
-import {Router} from 'express'
-import {fetchOrder} from '../controllers/order.controller.js'
+import { Router } from "express";
+import { fetchOrder } from "../controllers/order.controller.js";
 
-const router = Router()
+const router = Router();
 
-router.get('/:id',fetchOrder)
+router.get("/:id", fetchOrder);
 
-export default router
+export default router;

@@ -1,8 +1,8 @@
-import {Router} from 'express'
-import { fetchUser } from '../controllers/user.controller.js'
+import { Router } from "express";
+import { fetchUser } from "../controllers/user.controller.js";
 
-const router = Router()
+const router = Router();
 
-router.get('/:id',fetchUser)
+router.get("/:id", fetchUser);
 
-export default router
+export default router;

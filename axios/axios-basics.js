@@ -1,31 +1,18 @@
 import axios from "axios";
 import dotenv from "dotenv";
+import axiosClient from "./axiosClient.js";
 
 dotenv.config();
 
 const json_placeholder_users = process.env.JSON_PLACEHOLDER_USERS;
 const json_placeholder_posts = process.env.JSON_PLACEHOLDER_POSTS;
 
-axios.interceptors.request.use((config) => {
-  config.headers.Authorization = "Bearer tokenabcd";
-  console.log(
-    `Request sent to ${config.url} at ${new Date().toLocaleString()}`,
-  );
-  return config;
-});
-
-axios.interceptors.response.use((response) => {
-  console.log(
-    "Response received :",
-    JSON.stringify(response.data) + "at " + new Date().toLocaleString(),
-  );
-});
-
 async function fetchUsers(url) {
   try {
-    const response = await axios.get(url);
+    // const response = await axios.get(url);
+    const response = await axiosClient.get(url);
     const users = response.data;
-    console.log(users);
+    // console.log(users);
     // const emails = users.map((data)=> data.email)
     // console.log(emails ?? 'No Emails Found');
     // console.log('status :', response.status)
@@ -39,7 +26,7 @@ async function fetchUsers(url) {
   }
 }
 
-// await fetchUsers(json_placeholder_users)
+await fetchUsers(json_placeholder_users);
 
 async function fetchPosts(url) {
   try {
