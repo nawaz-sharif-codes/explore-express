@@ -1,9 +1,9 @@
+import { fetchUserById } from "../services/user.service.js";
+
 export function fetchUser(req, res) {
+  const id = req.params.id;
+  const data = fetchUserById(id);
   res
     .status(200)
-    .json({
-      success: true,
-      id: req.params.id,
-      message: "user fetched successfully",
-    });
+    .json({ success: true, data, message: "user fetched successfully" });
 }

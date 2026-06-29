@@ -1,15 +1,20 @@
-`Express Folder Structure`
+## Express Folder Structure
 
+```
 src/
 │
 ├── app.js
 │
 ├── routes/
-│      users.routes.js
-│      products.routes.js
+│     users.routes.js
 │
 ├── controllers/
-│      user.controller.js
-│      product.controller.js
+│     user.controller.js
+│
+├── services/
+│     user.service.js
 │
 └── middleware/
+```
+
+RAMBHAJO - 68840786

@@ -16,7 +16,7 @@ app.use(LoggerMiddleware);
 app.use("/user", UserRouter);
 app.use("/subscription", SubscriptionRouter);
 app.use("/order", OrderRouter);
-app.use("/product", ProductRouter);
+app.use("/products", ProductRouter);
 
 const PORT = Number(process.env.PORT) || 8080;
 
